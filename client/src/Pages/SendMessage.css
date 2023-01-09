@@ -1,0 +1,54 @@
+.send-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#message-input {
+  width: clamp(300px, 50vw, 1000px);
+  height: min(60vh, 500px);
+  font-size: 25px;
+  resize: none;
+  border-style: none;
+  background-image: linear-gradient(to bottom right, #ffebdb, #ffe0d0);
+  padding: 10px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+#message-input:focus {
+  outline-style: none;
+}
+
+.submit-message {
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-family: 'Nunito';
+  background: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  color: white;
+  margin-top: 10vh;
+  padding: 8px 15px;
+  transition: .35s all;
+  z-index: 2;
+}
+
+.submit-message:hover {
+  background-color: white;
+  color:black;
+  border-color: black;  
+  transition: .35s all;
+  z-index: 2;
+}
+
+.submit-message:active {
+  padding: 5px 12px;
+  transition: .15s all;
+  z-index: 2;
+}
+

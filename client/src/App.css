@@ -1,0 +1,328 @@
+/* Universal Styling */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito';
+}
+
+#root {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(153.15% 427.74% at 100% 98.61%, #024844 0%, #09986D 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  border: 1px solid #000000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+button, a {
+  cursor: pointer;
+}
+
+/* Top Bar Styling */
+
+#topBarWrap {
+  display: flex;
+  flex-direction: row;
+  background: none;
+  align-items: center;
+  padding: 20px 0;
+  z-index: 2;
+}
+
+#topBarWrap a {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  gap: 10px;
+  padding: 2px 10px;
+  height: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  background: none;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid white;
+  transition: all .35s;
+  left: 50px;
+}
+
+#topBarWrap a hr {
+  position: absolute;
+  max-height: 0px;
+  max-width: 0px;
+  height: 0px;
+  overflow: hidden;
+  transition: all .35s;
+  opacity: 0;
+  transform: translate(102.5px);
+}
+
+#topBarWrap .sendPhrase:hover hr {
+  max-height: 20px;
+  height: 20px;
+  max-width: 1px;
+  width: 1px;
+  transition: all .35s;
+  opacity: 1;
+  border-radius: 20px;
+}
+
+#topBarWrap .sendPhrase:hover svg  {
+  animation-name: rightArrowSendPhrase;
+  animation-duration: 0.35s;
+  animation-fill-mode: forwards; 
+  opacity: 1; 
+}
+
+#topBarWrap .sendPhrase:hover, #topBarWrap .sendHome:hover {
+  background: white;
+  border-color: black;
+  color: black;
+  padding-right: 40px;
+}
+
+#topBarWrap a:hover  {
+  background: white;
+  border-color: black;
+  color: black;
+}
+
+#topBarWrap a:active  {
+  background: rgb(180, 180, 180);
+}
+
+#topBarWrap  svg {
+  position: absolute;
+  opacity: 0;
+  height: 20px;
+  transform: translate(90px);
+}
+
+@keyframes rightArrowSendPhrase {
+  0% {
+      transform: translate(90px);
+  }
+  100% {
+      transform: translate(110px);
+  }
+}
+
+#topBarWrap .sendHome hr {
+  position: absolute;
+  max-height: 0px;
+  max-width: 0px;
+  height: 0px;
+  overflow: hidden;
+  transition: all .35s;
+  opacity: 0;
+  transform: translate(60px);
+}
+
+#topBarWrap .sendHome:hover hr {
+  max-height: 20px;
+  height: 20px;
+  max-width: 1px;
+  width: 1px;
+  transition: all .35s;
+  opacity: 1;
+  border-radius: 20px;
+}
+
+#topBarWrap .sendHome svg {
+  position: absolute;
+  opacity: 0;
+  height: 20px;
+  transform: translate(40px);
+}
+
+#topBarWrap .sendHome:hover svg  {
+  animation-name: rightArrowSendHome;
+  animation-duration: 0.35s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+@keyframes rightArrowSendHome {
+  0% {
+    transform: translate(40px);
+  }
+  100% {
+    transform: translate(67px);
+  }
+}
+
+/* Title */
+#topBarWrap #titleWrap {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  z-index: 2;
+} 
+
+#topBarWrap #titleWrap h1 {
+  letter-spacing: 2px;
+  font-size: 15px;
+}
+
+#topBarWrap #titleWrap p {
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+/* Quote Section */
+#quote-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px 0;
+  height: 80vh;
+  z-index: 2;
+}
+
+#quote-section .text {
+  text-align: center;
+  color: white;
+  padding: 20px 200px;
+}
+
+#quote-section .text #quote {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+#quote-section .text hr {
+  margin-bottom: 20px;
+}
+
+#quote-section .options {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  z-index: 2;
+}
+
+#quote-section .newQuote {
+  background: none;
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+  transition: .35s all;
+  z-index: 2;
+}
+
+#quote-section svg {
+  height: 30px;
+  cursor: pointer;
+  fill: white;
+  transition: .35s all;
+  z-index: 2;
+}
+
+#quote-section svg:hover {
+  -webkit-filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.5));
+  transition: .35s all;
+  z-index: 2;
+}
+
+#quote-section .newQuote:hover {
+  background: white;
+  color: black;
+  transition: .35s all;
+  z-index: 2;
+}
+
+.hover-underline-animation-black {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.hover-underline-animation-black:hover {
+  transition: color .5s ease-out;
+  color: black
+}
+
+.hover-underline-animation-black::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  z-index: 2;
+}
+
+.hover-underline-animation-black:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  z-index: 2;
+}
+
+.fade-in-text {
+  animation: fadeIn 1s;
+  opacity: 0;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+  animation-fill-mode: forwards; 
+  animation-iteration-count: 1;
+  animation-play-state: paused;
+  z-index: 2;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Audio Player */
+audio {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#music-playing {
+  position: absolute;
+  bottom: 0;
+  font-size: 16px;
+  color: white;
+}
